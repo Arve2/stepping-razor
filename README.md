@@ -1,5 +1,5 @@
 # stepping-razor
-MicroPython class for stepper unipolar stepper motors such as 28BYJ-48. Also [a classic tune by Peter Tosh](https://youtu.be/watch?v=aLJFRgE4Ywk).
+MicroPython class for unipolar stepper motors such as 28BYJ-48. Also [a classic tune by Peter Tosh](https://youtu.be/watch?v=aLJFRgE4Ywk).
 
 I was experimenting with a 28BYJ-48 stepper motor driven by a ULN2003 connected to an ESP32-C3. Found no existing module that I liked, so I made this one. Maybe it will help someone else.
 
@@ -62,7 +62,7 @@ Set home at current position/step.
 ## my_stepper.invert_rotation()
 Get/set inversion of rotation. Useful since "clockwise" may mean different things in different setups.
 - Get: `my_stepper.invert_rotation()`
-- Set: `my_stepper.invert_rotation(True)` or False_
+- Set: `my_stepper.invert_rotation(True)` _or False_
 
 ## my_stepper.delay_ms()
 Get/set milliseconds delay between steps to control speed vs torque.
@@ -70,7 +70,7 @@ Get/set milliseconds delay between steps to control speed vs torque.
 - Set: `my_stepper.delay_ms(10)`
 
 ## my_stepper.steps_per_revolution()
-Get/set milliseconds delay between steps to control speed vs torque.
+Get/set how many steps the motor takes forone full revolution (360deg).
 - Get: `my_stepper.steps_per_revolution()`
 - Set: `my_stepper.steps_per_revolution(2048)` _Standard 28BYJ-48_
 
