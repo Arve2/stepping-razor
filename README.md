@@ -5,6 +5,8 @@ I was experimenting with a 28BYJ-48 stepper motor driven by a ULN2003 connected 
 
 The main feature, compared to other ULN2003-modules, is that this module considers the _current_ step position (active coils) before taking a _new_ step. Thus, _not_ trying to move the rotor more than one position at a time.
 
+<img src="./media/breadboard-example.jpg" width="600" >
+
 Default is **full drive stepping**, for more power. **Wave drive** is also supported. Drive type is determined by `first_step` when instantiating the class. 
 - Wave drive: The four coils take turn being active one at a time, such as `[1,0,0,0]` to `[0,1,0,0]` to `[0,0,1,0]` to `[0,0,0,1]` to `[1,0,0,0]` and so on. Or the reverse order for counter-clockwise.
 - Full drive: The four coils take turn being active two at a time, such as `[1,1,0,0]` to `[0,1,1,0]` to `[0,0,1,1]` to `[1,0,0,1]` to `[1,1,0,0]` and so on. Or the reverse order for counter-clockwise.
